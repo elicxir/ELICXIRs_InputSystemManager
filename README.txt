@@ -26,6 +26,11 @@ EISMの特徴
 PackageManagerからInputSystemを導入してください。
 Project Settings のPlayer / Other Settings / Active Input Handling を Input System Package (New) または BothにすることによりInputSystemを有効化できます。
 その後、当機能をプロジェクトに導入してください。
+
+その際、EISM_Package.unitypackageを用いて導入することでより簡単に導入できるでしょう。
+(Asset→Import Packageから導入できます。)
+
+
 InputSystemManager.prefabをシーン上に設置することにより準備は完了です。
 
 ゲーム起動時にInit()を呼び出し、以降はUpdater()を呼び出すことにより入力を更新できます。
