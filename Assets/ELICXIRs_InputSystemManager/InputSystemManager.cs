@@ -4,6 +4,57 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 
+namespace EISM
+{
+
+    struct InputData
+    {
+        public void InputLog()
+        {
+
+        }
+    }
+
+    struct SingleInputData
+    {/*
+        public SingleInputData(bool ispressed)
+        {
+            isPressed = ispressed;
+        }*/
+
+        public bool isPressed
+        {
+            get; private set;
+        }
+        public bool isPressedThisFrame
+        {
+            get; private set;
+        }
+        public bool isReleaseThisFrame
+        {
+            get; private set;
+        }
+        public float PressTimer
+        {
+            get; private set;
+        }
+        public float HoldTimer
+        {
+            get; private set;
+        }
+        public bool ReleaseTimer
+
+        {
+            get; private set;
+        }
+    }
+
+    public class InputSystem : MonoBehaviour
+    {
+
+    }
+}
+
 public class InputSystemManager : MonoBehaviour
 {
     [SerializeField] PlayerInput playerInput;
@@ -24,6 +75,8 @@ public class InputSystemManager : MonoBehaviour
         public void Init(PlayerInput input)
         {
             inputAction = input.actions[id];
+
+           
 
             for (int i = 0; i < buffer.Length; i++)
             {

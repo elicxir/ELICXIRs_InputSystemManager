@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EISM;
+
+
 
 public class GameManager_Demo : MonoBehaviour
 {
+
     [SerializeField] InputSystemManager ISM;
 
     // Start is called before the first frame update

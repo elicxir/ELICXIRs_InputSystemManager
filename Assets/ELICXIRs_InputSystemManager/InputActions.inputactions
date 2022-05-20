@@ -7,12 +7,12 @@
             "actions": [
                 {
                     "name": "Button1",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "aef20fef-53a3-4287-8072-31aa00cb4ac5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Button2",
@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "move",
+                    "type": "Value",
+                    "id": "17f0a3a8-3ace-488c-b5a7-c3c23cafea45",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -296,6 +305,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Button4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3eadc1ce-4aca-4031-a406-12b05b8f2bbf",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
