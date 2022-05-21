@@ -26,6 +26,40 @@ EISM is a package for easy installation of Input System.
 3. Place the InputSystemManager prefab on the scene.
 Note that the prefab is set to "Don't Destroy on Load".
 
+4. EISM handles the input by initializing and updating it frame by frame.
+
+    - Initialization:
+      ```cs
+      InputSystem.Input_System.Init();
+      ```
+
+    - Frame-by-frame update:
+      ```cs
+      InputData input = InputSystem.Input_System.FrameUpdate();
+      ```
+
+5. InputData type variable "input" contains SingleInputData that records the input for each button.<br><br>To obtain SingleInputData, use GetSingleInputData(). Use EISM.Control as the argument (EISM.Control will automatically enumerate the Actions defined in inputactions).<br><br>Up key information can be obtained by using Control.Up as an argument.
+
+
+    ```cs
+    SingleInputData s_input= input.GetSingleInputData(Control.Up)
+    ```
+
+
+6. SingleInputData contains the following information
+
+    |  Property (readonly)  |  Type  | Description |
+    | ---- | ---- | ---- |
+    |  ID  |  string  |Corresponding Action name|
+    |  isPressed  |  bool  |Whether the button is pressed or not|
+    |  isPressedThisFrame  |  bool  |Whether or not the moment the button is pressed|
+    |  isReleasedThisFrame  |  bool  |Whether or not the moment the button is released|
+    |  PressTimer  |  float  |Time since isPressedThisFrame last set to True|
+    |  HoldTimer  |  float  |Time to keep pressing |
+    |  ReleaseTimer  |  float  |Time since isReleasedThisFrame last set to True|
+
+    (All time units are in seconds. )
+
 - Only actions for which InputActionType is a button are targeted for handling.
 
 - When you edit InputActions.inputactions, you need to update the Control enum.<br>Run "ExecuteOnValidate" in the prefab InputSystem.cs.
