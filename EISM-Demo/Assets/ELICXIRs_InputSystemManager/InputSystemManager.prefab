@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835944655140632858}
-  - component: {fileID: 835944655140632859}
   - component: {fileID: 835944655140632856}
+  - component: {fileID: 835944655698439016}
   m_Layer: 0
   m_Name: InputSystemManager
   m_TagString: Untagged
@@ -32,19 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &835944655140632859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835944655140632857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f44767ff1bdd70f4e97486a36c834d85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput: {fileID: 835944655140632856}
 --- !u!114 &835944655140632856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,3 +62,16 @@ MonoBehaviour:
   m_DefaultActionMap: Input
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &835944655698439016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835944655140632857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44767ff1bdd70f4e97486a36c834d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 835944655140632856}

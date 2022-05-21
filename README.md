@@ -4,6 +4,15 @@ Copyright (c) 2022 ELICXIR
 Released under the MIT license
 https://opensource.org/licenses/mit-license.php
 
+About
+
+
+
+How to Use
+
+Check Demo
+
+
 
 概要
 
